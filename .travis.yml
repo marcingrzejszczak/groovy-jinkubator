@@ -10,7 +10,6 @@ before_script:
  - "export JAVA_OPTS=-Xmx512m"
 
 script:
-#- ./gradlew build --info --stacktrace && mvn clean install
-- mvn clean install
+- ./gradlew build --info --stacktrace && mvn clean install
 
 

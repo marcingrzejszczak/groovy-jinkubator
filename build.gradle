@@ -1,0 +1,16 @@
+// apply plugin: 'groovy'
+plugins {
+    id 'groovy'
+}
+
+repositories {
+    mavenLocal()
+    jcenter()
+}
+
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.3.7'
+
+    testCompile 'org.spockframework:spock-core:0.7-groovy-2.0'
+}
