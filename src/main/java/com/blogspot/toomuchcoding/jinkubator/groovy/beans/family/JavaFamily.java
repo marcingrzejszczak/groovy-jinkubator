@@ -1,4 +1,4 @@
-package com.blogspot.toomuchcoding.jinkubator.groovy.family;
+package com.blogspot.toomuchcoding.jinkubator.groovy.beans.family;
 
 import java.util.List;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.blogspot.toomuchcoding.jinkubator.groovy.family
+package com.blogspot.toomuchcoding.jinkubator.groovy.beans.family
 
 import groovy.transform.EqualsAndHashCode
 import groovy.transform.ToString

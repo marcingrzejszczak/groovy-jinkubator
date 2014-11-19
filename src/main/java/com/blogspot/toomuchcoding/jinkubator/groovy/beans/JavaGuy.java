@@ -1,4 +1,4 @@
-package com.blogspot.toomuchcoding.jinkubator.groovy;
+package com.blogspot.toomuchcoding.jinkubator.groovy.beans;
 
 public class JavaGuy {
     private String name;

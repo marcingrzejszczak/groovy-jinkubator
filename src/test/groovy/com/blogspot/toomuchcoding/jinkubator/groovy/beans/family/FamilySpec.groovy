@@ -1,4 +1,4 @@
-package com.blogspot.toomuchcoding.jinkubator.groovy.family
+package com.blogspot.toomuchcoding.jinkubator.groovy.beans.family
 
 import spock.lang.Specification
 
@@ -28,9 +28,9 @@ class FamilySpec extends Specification {
             javaFamily.setFamily(family);
             javaFamily.setFriends(friends);
         expect:
-            '''
-            JavaFamily{family={daddy=JavaFamilyMember{name='John', age=55}, mum=JavaFamilyMember{name='Anna', age=50}}, friends=[JavaFamilyMember{name='Andrew', age=20}]}
-            '''.trim() == javaFamily.toString();
+            javaFamily.toString() == '''
+                                    JavaFamily{family={daddy=JavaFamilyMember{name='John', age=55}, mum=JavaFamilyMember{name='Anna', age=50}}, friends=[JavaFamilyMember{name='Andrew', age=20}]}
+                                    '''.trim();
     }
 
     def "should build and set values of the Groovy family much easier"() {
@@ -46,9 +46,9 @@ class FamilySpec extends Specification {
         and:
             GroovyFamily javaFamily = new GroovyFamily(family: family, friends: friends)
         expect:
-            '''
-            GroovyFamily(family:[mum:GroovyFamilyMember(name:Anna, age:50), daddy:GroovyFamilyMember(name:John, age:55)], friends:[GroovyFamilyMember(name:Andrew, age:20)])
-            '''.trim() == javaFamily.toString()
+            javaFamily.toString() == '''
+                                    GroovyFamily(family:[mum:GroovyFamilyMember(name:Anna, age:50), daddy:GroovyFamilyMember(name:John, age:55)], friends:[GroovyFamilyMember(name:Andrew, age:20)])
+                                    '''.trim()
     }
 
     def "should build and set values of the Groovy family with even less boilerplate code"() {
@@ -57,8 +57,8 @@ class FamilySpec extends Specification {
                                                                   daddy: new GroovyFamilyMember(age: 55, name: 'John')],
                                                          friends: [new GroovyFamilyMember(age: 20, name: 'Andrew')])
         expect:
-            '''
-            GroovyFamily(family:[mum:GroovyFamilyMember(name:Anna, age:50), daddy:GroovyFamilyMember(name:John, age:55)], friends:[GroovyFamilyMember(name:Andrew, age:20)])
-            '''.trim() == groovyFamily.toString()
+            groovyFamily.toString() == '''
+                                        GroovyFamily(family:[mum:GroovyFamilyMember(name:Anna, age:50), daddy:GroovyFamilyMember(name:John, age:55)], friends:[GroovyFamilyMember(name:Andrew, age:20)])
+                                        '''.trim()
     }
 }

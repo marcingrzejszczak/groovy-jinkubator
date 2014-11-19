@@ -1,5 +1,7 @@
 package com.blogspot.toomuchcoding.jinkubator.groovy
 
+import com.blogspot.toomuchcoding.jinkubator.groovy.beans.GroovyGuy
+import com.blogspot.toomuchcoding.jinkubator.groovy.beans.JavaGuy
 import spock.lang.Specification
 
 class GuySpec extends Specification {
@@ -45,7 +47,7 @@ class GuySpec extends Specification {
         when:
             javaGuy.age = expectedAge
         then:
-            expectedAge == javaGuy.age
+            javaGuy.age == expectedAge
     }
 
     def 'should further remove boilerplate code thanks to Groovy map constructor'() {
@@ -54,7 +56,7 @@ class GuySpec extends Specification {
         and:
             JavaGuy javaGuy = new JavaGuy(age: expectedAge)
         expect:
-            expectedAge == javaGuy.age
+            javaGuy.age == expectedAge
     }
 
     def 'should prove Groovy class looks much nicer and cleaner than Java one'() {
