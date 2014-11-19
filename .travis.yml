@@ -1,0 +1,16 @@
+language: groovy
+jdk:
+- oraclejdk8
+
+install:
+- true
+
+before_script:
+ - "echo $JAVA_OPTS"
+ - "export JAVA_OPTS=-Xmx512m"
+
+script:
+#- ./gradlew build --info --stacktrace && mvn clean install
+- mvn clean install
+
+
