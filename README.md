@@ -1,8 +1,5 @@
-[![Build Status](https://travis-ci.org/marcingrzejszczak/micro-infra-spring.svg?branch=master)](https://travis-ci.org/4finance/micro-infra-spring) [![Coverage Status](http://img.shields.io/coveralls/4finance/micro-infra-spring/master.svg)](https://coveralls.io/r/4finance/micro-infra-spring)[ ![Download](https://api.bintray.com/packages/4finance/micro/micro-infra-spring/images/download.svg) ](https://bintray.com/4finance/micro/micro-infra-spring/_latestVersion)
+[![Build Status](https://travis-ci.org/marcingrzejszczak/groovy-jinkubator.svg?branch=master)](https://travis-ci.org/4finance/groovy-jinkubator)
 
-micro-infra-spring
+groovy-jinkubator
 =======================
 
-Sets up the whole Spring infrastructure stack that will turn your microservice into a beauty.
-
-Check out [the wiki](https://github.com/4finance/micro-infra-spring/wiki) to have a deeper insight into the project.
