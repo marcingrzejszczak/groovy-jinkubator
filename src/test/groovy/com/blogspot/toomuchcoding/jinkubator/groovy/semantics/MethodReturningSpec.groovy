@@ -31,4 +31,19 @@ class MethodReturningSpec extends Specification {
             thrown(ClassCastException)
     }
 
+    def 'should show that you can call methods in groovy without passing parentheses to arguments'() {
+        given:
+            TestClass testClass = new TestClass()
+        when:
+            int result = testClass.someMethod 1, 2l, 'string'
+        then:
+            result == 1
+
+    }
+
+    class TestClass {
+        int someMethod(int a, long b, String c) { return 1 }
+    }
+
 }
+
