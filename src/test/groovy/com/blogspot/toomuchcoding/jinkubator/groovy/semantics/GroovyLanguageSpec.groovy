@@ -3,6 +3,7 @@ package com.blogspot.toomuchcoding.jinkubator.groovy.semantics
 import spock.lang.Specification
 
 class GroovyLanguageSpec extends Specification {
+    // different method scopes
     def "should call a public method"() {
         expect:
             new GroovyLanguage().publicByDefault()
@@ -18,6 +19,7 @@ class GroovyLanguageSpec extends Specification {
             new GroovyLanguage().packageScopedMethod()
     }
 
+    // returns
     def "should return a string from a method with return keyword"() {
         expect:
             new GroovyLanguage().stringReturningMethod() == 'OK'
@@ -44,4 +46,39 @@ class GroovyLanguageSpec extends Specification {
         then:
             thrown(ClassCastException)
     }
+
+    // defs
+    def 'should return a value when using def'() {
+        when:
+            def type = new GroovyLanguage().methodReturningSomething(2)
+        then:
+            type == 1
+    }
+
+    def 'should return some type when using plenty of defs'() {
+        when:
+            def type = new GroovyLanguage().guessMyType(2)
+        then:
+            type instanceof Date
+    }
+
+    // Equality
+    def 'should show that two objects are the same using is() and == operator'() {
+        given:
+            String first = new GroovyLanguage.SomeClass()
+            String second = new GroovyLanguage.SomeClass()
+        expect:
+            first == second
+            !first.is(second)
+    }
+
+    // Check http://groovy.codehaus.org/Groovy+Truth for more info
+    def 'should show Groovy Truth example on String'() {
+        given:
+            String blankString = ''
+        expect:
+            !blankString
+    }
+
+
 }
