@@ -13,8 +13,8 @@ class DuckTypingSpec extends Specification {
             executeQuacking(person)
     }
 
-
     void executeQuacking(def something) {
         something.quack()
     }
+
 }

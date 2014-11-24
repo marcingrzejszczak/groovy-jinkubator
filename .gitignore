@@ -3,3 +3,4 @@
 build
 target
 .gradle
+atlassian-ide-plugin.xml
