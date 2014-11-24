@@ -1,5 +1,7 @@
 package com.blogspot.toomuchcoding.jinkubator.groovy.semantics
 
+import com.blogspot.toomuchcoding.jinkubator.groovy.semantics.model.GroovyExample
+
 class MethodReturning {
 
     String stringReturningMethod() {

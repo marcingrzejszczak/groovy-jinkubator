@@ -1,4 +1,4 @@
-package com.blogspot.toomuchcoding.jinkubator.groovy.semantics
+package com.blogspot.toomuchcoding.jinkubator.groovy.semantics.model
 
 class SomeClass implements Comparable<SomeClass> {
     Integer someValue

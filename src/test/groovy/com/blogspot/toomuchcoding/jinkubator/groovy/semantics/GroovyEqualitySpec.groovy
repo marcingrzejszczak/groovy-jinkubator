@@ -1,5 +1,6 @@
 package com.blogspot.toomuchcoding.jinkubator.groovy.semantics
 
+import com.blogspot.toomuchcoding.jinkubator.groovy.semantics.model.GroovyExample
 import spock.lang.Specification
 
 class GroovyEqualitySpec extends Specification {

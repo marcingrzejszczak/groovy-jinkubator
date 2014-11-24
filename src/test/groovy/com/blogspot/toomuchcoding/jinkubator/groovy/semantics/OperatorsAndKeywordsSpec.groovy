@@ -1,6 +1,7 @@
 package com.blogspot.toomuchcoding.jinkubator.groovy.semantics
 
-import com.blogspot.toomuchcoding.jinkubator.groovy.beans.operators.JavaClassWithPrivateField
+import com.blogspot.toomuchcoding.jinkubator.groovy.operators.JavaClassWithPrivateField
+import com.blogspot.toomuchcoding.jinkubator.groovy.semantics.model.SomeClass
 import spock.lang.Specification
 
 class OperatorsAndKeywordsSpec extends Specification {

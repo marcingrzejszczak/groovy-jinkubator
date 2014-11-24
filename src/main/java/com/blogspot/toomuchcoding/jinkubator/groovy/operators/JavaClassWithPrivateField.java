@@ -1,4 +1,4 @@
-package com.blogspot.toomuchcoding.jinkubator.groovy.beans.operators;
+package com.blogspot.toomuchcoding.jinkubator.groovy.operators;
 
 public class JavaClassWithPrivateField {
     private String hiddenField = "hidden";
