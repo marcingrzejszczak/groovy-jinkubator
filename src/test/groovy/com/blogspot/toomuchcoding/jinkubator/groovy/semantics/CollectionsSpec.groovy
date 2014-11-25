@@ -5,18 +5,31 @@ import spock.lang.Specification
 class CollectionsSpec extends Specification {
 
     def 'should create a list with Groovy syntax'() {
-        expect:
-            ['a', 'b', 'c'] instanceof List
+        when:
+            List<String> strings = ['a', 'b', 'c', 'a']
+        then:
+            strings instanceof List
+            strings.size() == 4
+            strings[3] == 'a'
     }
 
     def 'should create a set with Groovy syntax'() {
-        expect:
-            (['a', 'b', 'c'] as HashSet<String>) instanceof Set
+        when:
+            Set<String> strings = ['a', 'b', 'c', 'a'] as HashSet<String>
+        then:
+            strings instanceof HashSet
+            strings.size() == 3
+            strings[0] == 'a'
     }
 
     def 'should create a map with Groovy syntax'() {
-        expect:
-            [key: 'Value', anotherKey: 'AnotherValue'] instanceof Map
+        when:
+            Map<String, String> map = [key: 'Value', anotherKey: 'AnotherValue']
+        then:
+            map instanceof Map
+            map.size() == 2
+            map.key == 'Value'
+            map['key'] == 'Value'
     }
 
     def 'should iterate over a collection'() {
