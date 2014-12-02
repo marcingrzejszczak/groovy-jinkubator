@@ -36,10 +36,6 @@ class _8_ClosureSpec extends Specification {
     }
 
     def 'should show syntax of a method with a closure'() {
-        given:
-            Closure closure = { int arg ->
-                return 100 + arg
-            }
         when:
             int result = calculate {
                 println it

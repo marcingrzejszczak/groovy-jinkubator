@@ -13,6 +13,7 @@ class _4_GroovyEqualitySpec extends Specification {
         expect:
             first == second
             !first.is(second)
+            first.is(first)
     }
 
     // Check http://groovy.codehaus.org/Groovy+Truth for more info
